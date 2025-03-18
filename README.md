@@ -2,7 +2,6 @@
 
 Here is the flow of the course, showing where challenges appear.
 
-
 ## Introduction
 
 Intro & Why the course is formatted i...
@@ -43,7 +42,7 @@ Some extra material if you're interested
 
     CSS Units: vh, vw, vmin, vmax
 
-## Day 5 | Practice time!
+## Day 5 | Practice time
 
 Challenge #2 - Solution
 Challenge #3
@@ -176,8 +175,8 @@ Available Dec 13
 
 Available Dec 14
 
-You've done it!
-Links to other resources
-Your Final Challenge
-Final Challenge | Design Specs
-The image used
+- You've done it!
+- Links to other resources
+- Your Final Challenge
+- Final Challenge | Design Specs
+- The image used
