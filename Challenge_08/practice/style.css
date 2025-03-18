@@ -1,0 +1,229 @@
+/* 
+
+~~ GLOBAL ELEMENTS ~~
+
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 16px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* 
+
+~~ FONT ELEMENTS ~~
+
+*/
+
+h1 {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.section-title {
+    color: #87629A;
+}
+
+/* 
+
+~~ STRUCTURAL ELEMENTS ~~
+
+*/
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.col {
+    /* these are now flex items */
+    width: 100%;
+}
+
+/* The adjacent sibling selector (+) is used to select an element that is directly after another specific element. */
+.col + .col {
+    margin-left: 30px;
+}
+
+/* 
+
+~~ HEADER ELEMENTS ~~
+
+*/
+
+header {
+    background: #136c72;
+    padding: 1em 0;
+    /*border: 2px solid blue;*/ /* For testing & debugging. */
+}
+
+header > .container {
+    /*border: 2px solid limegreen;*/ /* For testing & debugging. */
+}
+
+.logo {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    /*border: 2px solid yellow;*/ /* For testing & debugging. */
+    height: 100%;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* This works if you don't want to use flex-grow and flex-shrink. */
+    /* flex-grow: 1;*/ /* This is a newer CSS feature. Default is "0". "1" allows flex content to fill the containing element. */
+    /*border: 2px solid red;*/ /* For testing & debugging. */
+    /* margin-left: 1em */ /* For providing a gap between the logo and primary nav list when it is left-aligned. */
+}
+
+.nav__list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /*border: 2px solid goldenrod;*/ /* For testing & debugging. */
+}
+
+.nav__list--primary {
+    margin: 0 auto; /* For centering the primary nav list. */
+}
+
+.nav__item {
+    font-size: 0.9rem;
+}
+
+.nav__item + .nav__item {
+    padding-left: 1em;
+}
+
+/*.nav__item--push-right {
+    margin-left: auto;
+}*/
+
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;;
+}
+
+.nav__link--button {
+    background: #fff;
+    color: #136c72;
+    padding: .25em 1em;
+    border-radius: 10em;
+}
+
+.nav__link:hover {
+    opacity: .75;
+}
+
+/* 
+
+~~ HERO ELEMENTS ~~
+
+*/
+
+.hero {
+    padding: 100px 0;
+    background-color: #23424A;
+    color: #FFF;
+}
+
+.hero__text { 
+    width: 62%;
+}
+
+.hero__img {
+    width: 32%;
+    align-self: flex-start;
+}
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: #23424A;
+    font-weight: 900;
+    background-color: #38CFD9;
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75; 
+}
+
+/* 
+
+~~ MAIN ELEMENTS ~~
+
+*/
+
+.main {
+    margin-top: 3em;
+}
+
+.primary-content {
+    width: 62%;
+}
+
+.sidebar {
+    width: 32%;
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #136c72;
+}
+
+/* 
+
+~~ MEDIA QUERIES ~~
+
+*/
+
+@media (max-width: 600px) {
+    .row {
+        display: block;
+    }
+
+    .hero__text,
+    .hero__img,
+    .primary-content,
+    .sidebar {
+        width: 100%;
+    }
+
+    .hero__img {
+        margin-top: 3em;
+    }
+
+    .sidebar {
+        margin-top: 2em;
+    }
+}

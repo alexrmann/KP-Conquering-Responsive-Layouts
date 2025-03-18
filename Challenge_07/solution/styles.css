@@ -1,0 +1,157 @@
+/* File based on Kevin Powell's Conquering Responsive Layout's challenge */
+
+
+/* GLOBAL */
+
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+:root {
+	font-size: 10px;
+}
+
+html {}
+
+body {
+	width: 100%;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;
+}
+
+img {
+	width: 100%;
+	border: 0;
+}
+
+h1 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 900;
+	font-size: 5rem;
+	color: #824936;
+	margin: 0;
+	line-height: 1;
+}
+
+h2 {
+	font-family: 'Playfair Display', serif;
+	font-weight: 900;
+	font-size: 3.6rem;
+	margin-top: 0;
+	color: #f3eed9;
+}
+
+
+p {
+	font-size: 2.1rem;
+	line-height: 1.5;
+	color: #ffffff;
+}
+
+
+/* CONTENT CONTAINERS */
+
+
+.container {
+	width: 80%;
+	max-width: 1128px;
+	margin: 0 auto;
+}
+
+
+/* HERO */
+
+
+.hero {
+	min-height: 660px;
+	background-color: #f3eed9;
+	display: flex;
+	align-items: center;
+}
+
+.hero p {
+	margin-top: 0;
+	font-weight: 300;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	letter-spacing: 1rem;
+	color: #000000;
+}
+
+.hero--content {
+	width: 70%;
+  	text-align: center;
+  	margin: 0 auto;
+}
+
+
+/* SECTIONS */
+
+
+.section {	
+	padding: 6em 0;
+}
+
+.section--first {
+	background-color: #ffffff;
+}
+
+.section--first h2 {
+	color: #824936;
+	text-align: center;
+}
+
+.section--first p {
+	color: #000000;
+}
+
+.section--second {
+	background-color: #222C2A;
+}
+
+.section--third {
+	background-color: #824936;
+}
+
+@media (min-width: 900px) {
+
+	h1 {
+		font-size: 6rem;
+	}
+
+
+	/* ROWS & COLUMNS */
+
+
+	.row {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.col {
+		width: 100%;
+	}
+
+	.col + .col {
+		margin-left: 4em;
+	}
+
+
+	/* Reverse final section image position in 2-column layout */
+
+
+	.section--third > .row {
+		flex-direction: row-reverse;
+	}
+
+	.section--third > .row > .col:first-of-type {
+		margin-left: 4em;
+	}
+
+	.section--third > .row > .col + .col {
+		margin-left: 0;
+	}
+
+}

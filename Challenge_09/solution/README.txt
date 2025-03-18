@@ -1,0 +1,1 @@
+For a slightly different approach, see Kevin Powell's video solution demo here: https://courses.kevinpowell.co/view/courses/conquering-responsive-layouts/277099-day-20-mobile-navigation-challenge-solution/800799-navigation-challenge-my-solution

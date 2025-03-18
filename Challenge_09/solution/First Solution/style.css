@@ -1,0 +1,268 @@
+/* Challenge
+
+   Make the navigation layout work
+   on both mobile and large screens.
+
+   Mobile-first, so mobile styles first,
+   then add the large screen styles
+   inside the existing media query
+
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+}
+
+img {
+}
+
+h1 {
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.section-title {
+    color: #87629A;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase; 
+    color: #23424A;
+    font-weight: 900;
+    background-color: #38CFD9;
+    padding: .75em 2em;
+    border-radius: 100px;
+}
+
+.btn:hover,
+.btn:focus {
+    opacity: .75; 
+}
+
+.container {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto;
+    /* added for nav-toggle positioning */
+    position: relative;
+}
+
+
+/* HEADER & NAVIGATION */
+
+
+header {
+    background: #136c72;
+    padding: 1em 0;
+    text-align: center;
+}
+
+.logo {
+    align-self: center;
+}
+
+.nav {
+    width: 100%;
+    visibility: hidden;
+    position: absolute;
+}
+
+.nav--visible {
+    visibility: visible;
+    height: auto;
+    position: relative;
+}
+
+.nav-toggle {
+    cursor: pointer;
+    border: 0;
+    width: 3em;
+    height: 3em;
+    padding: 0em;
+    border-radius: 50%;
+    background: #072A2D;
+    color: white;
+    transition: background 250ms ease;
+    align-self: center;    
+    position: absolute;
+    left: 0;
+}
+
+.nav-toggle:focus-visible,
+.nav-toggle:hover {
+    background: white;
+    /*opacity: .75;*/
+    .hamburger,
+    .hamburger::before,
+    .hamburger::after {
+        background: black;
+}
+}
+
+.nav__list { /* Alternatively, this could have targeted '.nav ul' */
+    list-style: none;
+    padding: 0;
+}
+
+.nav__item { /* Alternatively, this could have targeted '.nav li' */
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+.nav__item:last-of-type { /* Alternatively, this could have targeted '.nav li:last-of-type'. */
+    padding-bottom: 0;
+}
+
+.nav__link { /* Best not to target link elements ('a') because that would affect the hero button style. */
+    font-size: 1.1rem;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: opacity 250ms ease;
+}
+
+.nav__link:hover,
+.nav__link:focus-visible {
+    opacity: 0.7;
+}
+
+.nav__link--button {
+    color: #23424A;
+    background: #fff;
+    border-radius: 200px;
+    padding: 0.5em 1em;
+}
+
+/* HAMBURGER MENU ICON */
+
+
+.hamburger {
+    width: 50%;
+    position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+    display: block;
+    margin: 0 auto;
+    height: 3px;
+    background: white;
+    transition: background 250ms ease;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    width: 100%;
+}
+
+.hamburger::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after {
+    transform: translateY(3px);
+}
+
+/* HERO STYLES */
+
+
+.hero {
+    padding: 100px 0;
+    background-color: #23424A;
+    color: #FFF;
+}
+
+.hero__img {
+    margin-top: 2em;
+}
+
+
+.hero p {
+    margin-bottom: 3em;
+}
+
+.main {
+    margin-top: 3em;
+}
+
+
+.sidebar {
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #136c72;
+}
+
+/* LARGE SCREEN SIZES */
+
+
+@media (min-width: 900px) {
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav {
+        position: relative;
+        visibility: visible;
+        display: flex;
+        height: auto;
+        align-items: center;
+    }
+
+    .nav li {
+        padding-bottom: 0;
+    }
+
+    .nav__list {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav__list--primary {
+        margin: 0 auto;
+    }
+
+    .nav__list--secondary {
+
+    }
+
+    .nav__item + .nav__item {
+        margin-left: 1em;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .hero__text {
+        width: 62%;
+    }
+    
+    .hero__img {
+        width: 32%;
+        align-self: flex-start;
+        margin: 0;
+    }
+    
+    .primary-content {
+        width: 62%;
+    }
+
+    .sidebar {
+        width: 32%;
+    }
+    
+    
+}
